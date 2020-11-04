@@ -39,7 +39,7 @@ This model used most of the features to get a general idea of which features aff
 
 After running the OLS, This model had an **R^2 of 1.0** which tells us that its **overfitting** the data. The biggest contributor to this was the zip codes features since there was 70 different zip codes the model was using.
 ## Final Model
-The features selected in this model were: **price**, **sqft_living**, **sqft_lot**, **sqft_living15**, **yr_built**, **bedrooms, floors**, **waterfront**, **condition**, **grade**, **yrs_renovated**, **sale_month**. **Zip Codes** was removed to avoid **overfitting**. This model also used a **Stepwise Function** to eliminate **p-values over 0.5** and **Recursive Feature Elimination** to select the most relevant features. The **R^2** is lower then what was hoped for at **.66** but overall much better fitting then before. Both the **train and test data** had an **standard error of 1.4**.
+The features selected in this model were: **price**, **sqft_living**, **sqft_lot**, **sqft_living15**, **yr_built**, **bedrooms, floors**, **waterfront**, **condition**, **grade**, **yrs_renovated**, **sale_month**. **Zip Codes** was removed to avoid **overfitting**. This model also used a **Stepwise Function** to eliminate **p-values over 0.5** and **Recursive Feature Elimination** to select the most relevant features. The **R^2** is lower then what was hoped for at **.66** but overall much better fitting then before. Both the **train and test data** had an **A RMSE is $203618**.
 ![alt text](https://github.com/Eduardoosorio23/Mod_2_Project/blob/main/data_files/Images/OLS.png?raw=true "homoscedasticity")
 
 
