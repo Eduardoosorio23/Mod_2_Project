@@ -34,10 +34,20 @@ The data used took property information from King County. The Data Frame contain
 -Created a **month_sold** column to show us the month the house was last sold.
 
 ## Baseline model
-This model used most of the features to get a general idea of which features affect the data the most. There was some **multicollinearity** between **sqft_living**, **sqft_living15**, and **bathrooms**. The only feature taken out here was **bathrooms** because **sqft_living15** could still be useful to the model.
+This model used most of the features to get a general idea of which features affect the data the most. There was some **multicollinearity** between **sqft_living**, **sqft_living15**, and **bathrooms**. The only feature taken out here was **bathrooms** because **sqft_living15** could still be useful to the model. Heres a table of how the rest of the data correlated.
+![alt text](https://github.com/Eduardoosorio23/Mod_2_Project/blob/main/data_files/Images/kcc%20correlation.png?raw=true "Data correlation")
+
 After running the OLS, This model had an **R^2 of 1.0** which tells us that its **overfitting** the data. The biggest contributor to this was the zip codes features since there was 70 different zip codes the model was using.
 ## Final Model
 The features selected in this model were: **price**, **sqft_living**, **sqft_lot**, **sqft_living15**, **yr_built**, **bedrooms, floors**, **waterfront**, **condition**, **grade**, **yrs_renovated**, **sale_month**. **Zip Codes** was removed to avoid **overfitting**. This model also used a **Stepwise Function** to eliminate **p-values over 0.5** and **Recursive Feature Elimination** to select the most relevant features. The **R^2** is lower then what was hoped for at **.66** but overall much better fitting then before. Both the **train and test data** had an **standard error of 1.4**.
+![alt text](https://github.com/Eduardoosorio23/Mod_2_Project/blob/main/data_files/Images/OLS.png?raw=true "homoscedasticity")
+
+
+![alt text](https://github.com/Eduardoosorio23/Mod_2_Project/blob/main/data_files/Images/Mod_2%20Homoscadacity.png?raw=true "homoscedasticity")
+- The data is mostly evenly scattered.
+
+![alt text](https://github.com/Eduardoosorio23/Mod_2_Project/blob/main/data_files/Images/mod_2%20QQplot.png?raw=true "QQ Plot")
+- The **QQ plot** shows us that the data came from common distributions
 
 ## Recomendations
 
